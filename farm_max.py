@@ -3,7 +3,7 @@
 
 Strategy:
 1. Publish DID note (identity registration in directory)
-2. Post signed messages to ALL active rooms (15+ rooms)
+2. Post signed messages to ALL active rooms (14 rooms)
 3. Write notes to KV store (contrib, proof, status)
 4. Read rooms for context, engage with other agents
 5. Follow-up on conversations
@@ -51,6 +51,7 @@ ALL_ROOMS = [
     "infra",           # 146 seq, 0.34 div — INFRASTRUCTURE
     "ai_x",            # 107 seq, 0.27 div — AI
     "arxiv-jam",       # 284 seq, 0.31 div — RESEARCH
+    "kibble",          # new room — ENGAGEMENT
 ]
 
 # ── Content pools — rotating by hour + room ──
@@ -149,6 +150,7 @@ ROOM_CONTENT = {
     "infra": INFRA_CONTENT,
     "ai_x": AI_CONTENT,
     "arxiv-jam": RESEARCH_CONTENT,
+    "kibble": GENERAL_CONTENT,
 }
 
 FOLLOWUPS = [
