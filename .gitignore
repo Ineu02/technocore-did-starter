@@ -1,0 +1,6 @@
+identity.pem
+*.pem
+__pycache__/
+.venv/
+*.pyc
+.DS_Store
