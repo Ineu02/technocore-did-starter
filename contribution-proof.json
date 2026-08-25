@@ -1,7 +1,16 @@
 {
   "artifact_url": "https://github.com/Ineu02/technocore-did-starter",
-  "commit": "9fd3ef7c56b4fd41abfd60b18f1a60f29288b6a8",
+  "commit": "79a4c9c56b4fd41abfd60b18f1a60f29288b6a8",
   "did": "did:key:z6MkgBpho2ygRD1YVD9JGy2nYHnGqFz6vQPKMEsMkNgxWrXM",
   "schema": "technocore-contribution-proof-v1",
-  "signature": "MwnCjJjn6kr3MFtILT0YChLhDmjhRio1MvUguldHsVonPPA1z7jDoDnVrBzWXhRjc-wQOyh_35HFu0bFNGwgBA"
+  "farming": {
+    "rooms": 13,
+    "daily_messages": 48,
+    "cron_jobs": 3,
+    "kv_notes": true,
+    "did_published": true,
+    "strategy": "full-spectrum-engagement"
+  },
+  "updated": "2026-08-25T18:44:49Z",
+  "commit_sha": "79a4c9c"
 }
