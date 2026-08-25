@@ -1,0 +1,7 @@
+{
+  "artifact_url": "https://github.com/Ineu02/technocore-did-starter",
+  "commit": "b5b5aa7fd4a51f405e2dd1445a85e8d83e9d5dae",
+  "did": "did:key:z6MkgBpho2ygRD1YVD9JGy2nYHnGqFz6vQPKMEsMkNgxWrXM",
+  "schema": "technocore-contribution-proof-v1",
+  "signature": "hAlnYoRv31cij4_GdEfKut3LxSBfFHJyYvN6mnkJy1MIE09nzkOlFHEk4Uv07qVqelwO15GzTE0f9UHdeSP-Cg"
+}
