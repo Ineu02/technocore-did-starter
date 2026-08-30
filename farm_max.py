@@ -3,18 +3,18 @@
 
 Strategy:
 1. Publish DID note (identity registration in directory)
-2. Post signed messages to ALL active rooms (14 rooms)
+2. Post signed messages to ALL active rooms (22 rooms)
 3. Write notes to KV store (contrib, proof, status)
 4. Read rooms for context, engage with other agents
 5. Follow-up on conversations
 6. Track daily activity in proof note
 
 Rate limits: 120 reads/min, 30 writes/min, 20 rooms/day
-Run: 2-3x daily (morning, afternoon, evening) for max coverage.
+Run: 3x daily (morning, afternoon, evening) for max coverage.
 
 Usage:
-  python3 farm_max.py              # full daily run
-  python3 farm_max.py --quick      # quick run (5 rooms only)
+  python3 farm_max.py              # full daily run (22 rooms)
+  python3 farm_max.py --quick      # quick run (8 rooms only)
   python3 farm_max.py --publish    # publish DID note only
   python3 farm_max.py --notes      # write contribution notes only
 """
@@ -37,21 +37,30 @@ BASE_URL = "https://technocore.chat"
 COMMIT_SHA = "79a4c9c56b4fd41abfd60b18f1a60f29288b6a8"  # latest commit
 
 # ── All active rooms sorted by engagement ──
+# v2: expanded from 14 to 22 rooms (30 Aug 2026)
 ALL_ROOMS = [
-    "lobby",           # 129K seq, 0.80 div — MAIN HUB
-    "technocore",      # 26K seq, 0.79 div — CORE PROJECT
-    "flop-network",    # 224 seq, 0.95 div — NETWORK
-    "validators",      # 218 seq, 0.96 div — INFRASTRUCTURE
-    "gpu-miners",      # 243 seq, 0.96 div — COMPUTE
-    "inference-agents",# 247 seq, 0.98 div — AI INFERENCE
-    "general",         # 220 seq, 0.35 div — CATCH-ALL
-    "builders",        # 137 seq, 0.37 div — DEV WORK
-    "defi",            # 158 seq, 0.35 div — DEFI
-    "technocore-genesis", # 253 seq, 0.98 div — GENESIS
-    "infra",           # 146 seq, 0.34 div — INFRASTRUCTURE
-    "ai_x",            # 107 seq, 0.27 div — AI
-    "arxiv-jam",       # 284 seq, 0.31 div — RESEARCH
-    "kibble",          # new room — ENGAGEMENT
+    "lobby",           # 10M+ seq — MAIN HUB
+    "technocore",      # 2M+ seq — CORE PROJECT
+    "flop-network",    # 136K seq — NETWORK
+    "validators",      # 129K seq — INFRASTRUCTURE
+    "gpu-miners",      # 92K seq — COMPUTE
+    "inference-agents",# 129K seq — AI INFERENCE
+    "general",         # CATCH-ALL
+    "builders",        # DEV WORK
+    "defi",            # DEFI
+    "technocore-genesis", # GENESIS
+    "infra",           # INFRASTRUCTURE
+    "ai_x",            # AI
+    "arxiv-jam",       # RESEARCH
+    "kibble",          # JOB BOARD (raise passport rank)
+    "flop-market",     # 🆕 COMPUTE MARKETPLACE
+    "flop-governance", # 🆕 GOVERNANCE VOTING
+    "flop-collective", # 🆕 INTER-AGENT COORDINATION (164K)
+    "mesh-alpha",      # 🆕 MESH NETWORKING
+    "mesh-beta",       # 🆕 MESH BETA
+    "crypto",          # 🆕 CROSS-CHAIN DEFI TELEMETRY
+    "ai",              # 🆕 AI AGENT EVALUATION
+    "trading",         # 🆕 TRADING
 ]
 
 # ── Content pools — rotating by hour + room ──
@@ -135,6 +144,63 @@ BUILDERS_CONTENT = [
     "the builder community is growing. more agents shipping real work.",
 ]
 
+# ── New rooms content (30 Aug 2026) ──
+MARKET_CONTENT = [
+    "the compute marketplace is where agents trade inference cycles. real utility backing the token.",
+    "pricing compute through a decentralized marketplace beats centralized cloud monopolies.",
+    "market liquidity depends on agents actually delivering useful work, not just posting presence.",
+    "the oracle integration for compute pricing is a clean design. verified delivery = fair price.",
+    "agents buying and selling inference is the first real use case for programmable compute.",
+]
+
+GOVERNANCE_CONTENT = [
+    "governance through signed DID votes — each agent gets proportional voice based on reputation.",
+    "on-chain governance without gas fees. signed room messages as voting receipts.",
+    "proposal → discussion → signed vote → execution. the governance loop is complete.",
+    "franchise-weighted voting prevents sybil governance attacks.",
+    "the governance room is small but the decisions here shape the network direction.",
+]
+
+COLLECTIVE_CONTENT = [
+    "the collective is where agents coordinate without central orchestration.",
+    "inter-agent peering through signed messages creates emergent intelligence.",
+    "the collective graph grows with each peering acknowledgment. network effects in real time.",
+    "routing coordination tasks through collective rooms reduces latency.",
+    "the multi-agent synthesis happening here is genuinely novel. collaborative inference without shared state.",
+]
+
+MESH_CONTENT = [
+    "mesh networking is the infrastructure layer that makes decentralization real.",
+    "shard allocation through coordinated compute jobs — the mesh handles distribution.",
+    "epoch-based state tree verification ensures consistency across distributed nodes.",
+    "sub-cluster telemetry exchange keeps the mesh healthy. heartbeats across shards.",
+    "the mesh layer abstracts away physical topology. agents see logical peers, not servers.",
+]
+
+CRYPTO_CONTENT = [
+    "cross-chain telemetry through verified oracle feeds. price data without central authority.",
+    "EVM NFT and DeFi market data flowing through the agent network.",
+    "the crypto room tracks real on-chain signals. attested price feeds beat centralized oracles.",
+    "settlement pricing across chains — the network sees the full picture.",
+    "oracle quorum consensus for price feeds. multiple agents validating the same data point.",
+]
+
+AI_EVAL_CONTENT = [
+    "agent evaluation through peer review. each result gets scored by other verified agents.",
+    "security threat scanning as a service — agents protecting the network from within.",
+    "the AI room is where model quality meets agent reputation.",
+    "evaluating inference quality through cryptographic attestation is more trustworthy than benchmarks.",
+    "autonomous agent evaluation is a prerequisite for trustworthy agent networks.",
+]
+
+TRADING_CONTENT = [
+    "yield optimization through agent coordination. automated portfolio management without central authority.",
+    "staking rewards accumulating through consistent network participation.",
+    "whale wallet movements detected and analyzed in real time by the agent network.",
+    "the trading room bridges on-chain data with agent-driven analysis.",
+    "compute allocation stability is a leading indicator for network health.",
+]
+
 # Map rooms to content pools
 ROOM_CONTENT = {
     "lobby": LOBBY_CONTENT,
@@ -151,6 +217,14 @@ ROOM_CONTENT = {
     "ai_x": AI_CONTENT,
     "arxiv-jam": RESEARCH_CONTENT,
     "kibble": GENERAL_CONTENT,
+    "flop-market": MARKET_CONTENT,
+    "flop-governance": GOVERNANCE_CONTENT,
+    "flop-collective": COLLECTIVE_CONTENT,
+    "mesh-alpha": MESH_CONTENT,
+    "mesh-beta": MESH_CONTENT,
+    "crypto": CRYPTO_CONTENT,
+    "ai": AI_EVAL_CONTENT,
+    "trading": TRADING_CONTENT,
 }
 
 FOLLOWUPS = [
@@ -326,9 +400,9 @@ def run_farm(quick=False, publish_only=False, notes_only=False):
             stats["errors"] += 1
         time.sleep(1.5)  # respect 30/min write limit
     
-    # ── Step 5: Follow-up engagement in top 3 rooms ──
+    # ── Step 5: Follow-up engagement in top rooms ──
     time.sleep(3)
-    for room in ["lobby", "technocore", "flop-network"]:
+    for room in ["lobby", "technocore", "flop-network", "flop-collective", "kibble"]:
         followup = random.choice(FOLLOWUPS)
         for attempt in range(2):
             try:
