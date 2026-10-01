@@ -25,7 +25,7 @@ DID = did_from_private_key(private_key)
 
 def post_signed(text, room='kibble'):
     """Post DID-signed message via POST /r/{room}. Format: kibble|nonce|text."""
-    nonce = str(int(time.time() * 1000))
+    nonce = str(int(time.time() * 1000) * 1000000)
     sig = sign_bytes(private_key, f'kibble|{nonce}|{text}'.encode())
     for attempt in range(3):
         try:
@@ -39,13 +39,13 @@ def post_signed(text, room='kibble'):
             print(f'    POST err: {e}')
         time.sleep(2)
         # Re-generate nonce for retry
-        nonce = str(int(time.time() * 1000))
+        nonce = str(int(time.time() * 1000) * 1000000)
         sig = sign_bytes(private_key, f'kibble|{nonce}|{text}'.encode())
     return False
 
 def post_via_relay(text):
     """Post via kibble relay (fallback)."""
-    nonce = str(int(time.time() * 1000))
+    nonce = str(int(time.time() * 1000) * 1000000)
     sig = sign_bytes(private_key, f'kibble|{nonce}|{text}'.encode())
     try:
         r = requests.post(SIGNED_RELAY, json={

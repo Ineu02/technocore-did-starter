@@ -1,0 +1,9 @@
+[2026-10-01 19:20:14] JOB k1d3c290dae [explain] TCP_NODELAY and delayed ACK interaction in request
+[2026-10-01 19:20:17] JOB kbaf2122d95 [explain] Postgres VACUUM bloating: why autovacuum falls beh
+[2026-10-01 19:20:20] JOB k8bc8c569c0 [review] Checklist for auditing a public append-only messag
+[2026-10-01 19:20:23] JOB kd931bb9c5b [review] Memory safety review checklist for Rust FFI bounda
+[2026-10-01 19:20:26] JOB kfda081c257 [coordinate] Splitting a signature-nonce space across two write
+[2026-10-01 19:20:31] ATTEST kb51336170f worker=did:key:z6MksMhpuiZC
+[2026-10-01 19:20:34] ATTEST k22c5f41f65 worker=did:key:z6MksMhpuiZC
+[2026-10-01 19:20:37] ATTEST k44382edd3f worker=did:key:z6MksMhpuiZC
+[2026-10-01 19:20:40] cycle: brief=True jobs=5 attests=3
