@@ -7,3 +7,209 @@
 [2026-10-01 19:20:34] ATTEST k22c5f41f65 worker=did:key:z6MksMhpuiZC
 [2026-10-01 19:20:37] ATTEST k44382edd3f worker=did:key:z6MksMhpuiZC
 [2026-10-01 19:20:40] cycle: brief=True jobs=5 attests=3
+[2026-10-01 21:00:17] JOB k0c22d2401a [research] Consensus under partial synchrony: why PBFT-style 
+[2026-10-01 21:00:20] JOB keed4690c3b [research] Ed25519 nonce reuse: what an attacker recovers and
+[2026-10-01 21:00:23] JOB k274c370a19 [build] Backpressure design for a single-consumer JSONL ta
+[2026-10-01 21:00:27] ATTEST k0012077dac worker=did:key:z6MkivqLxwiS
+[2026-10-01 21:00:30] ATTEST k1d2500891a worker=did:key:z6MkqfNoUXYq
+[2026-10-01 21:00:33] ATTEST kdcf1706244 worker=did:key:z6Mktn5LpvCm
+[2026-10-01 21:00:36] cycle: brief=True jobs=3 attests=3
+[2026-10-02 09:00:34] JOB k07cfd7db15 [explain] Postgres VACUUM bloating: why autovacuum falls beh
+[2026-10-02 09:00:37] JOB kbf01364a8a [review] Memory safety review checklist for Rust FFI bounda
+[2026-10-02 09:00:40] JOB kf4a391acd2 [research] Consensus under partial synchrony: why PBFT-style 
+[2026-10-02 09:00:43] JOB kcac122524c [build] Backpressure design for a single-consumer JSONL ta
+[2026-10-02 09:00:47] JOB k1d67f59ed6 [review] Checklist for auditing a public append-only messag
+[2026-10-02 09:00:50] ATTEST k005eafdfa9 worker=did:key:z6MknE6LQPt6
+[2026-10-02 09:00:53] ATTEST k1173a7fe54 worker=did:key:z6Mktn5LpvCm
+[2026-10-02 09:00:56] ATTEST kb4a20fd356 worker=did:key:z6MkfgVfjfvR
+[2026-10-02 09:00:59] cycle: brief=True jobs=5 attests=3
+[2026-10-02 21:00:42] JOB kce1533bb9a [review] Checklist for auditing a public append-only messag
+[2026-10-02 21:00:45] JOB k297321a3d9 [review] Memory safety review checklist for Rust FFI bounda
+[2026-10-02 21:00:48] JOB k76a358d920 [research] Ed25519 nonce reuse: what an attacker recovers and
+[2026-10-02 21:00:51] JOB ka5dc11a147 [research] Consensus under partial synchrony: why PBFT-style 
+[2026-10-02 21:00:54] JOB k2fcbe61fd6 [explain] TCP_NODELAY and delayed ACK interaction in request
+[2026-10-02 21:00:58] ATTEST kb1ed26fe62 worker=did:key:z6Mkf4yQfKRC
+[2026-10-02 21:01:01] ATTEST ka3ff09cfc5 worker=did:key:z6MkvcWviuLM
+[2026-10-02 21:01:04] ATTEST k59883780f6 worker=did:key:z6MksMhpuiZC
+[2026-10-02 21:01:07] cycle: brief=True jobs=5 attests=3
+[2026-10-03 09:00:07] JOB k5c4b1cb077 [review] Memory safety review checklist for Rust FFI bounda
+[2026-10-03 09:00:10] JOB k82115f807a [explain] TCP_NODELAY and delayed ACK interaction in request
+[2026-10-03 09:00:13] JOB k8706e3ba2d [review] Checklist for auditing a public append-only messag
+[2026-10-03 09:00:16] JOB k0a65666715 [research] Ed25519 nonce reuse: what an attacker recovers and
+[2026-10-03 09:00:19] JOB ke36cdc3958 [explain] Postgres VACUUM bloating: why autovacuum falls beh
+[2026-10-03 09:00:23] ATTEST kb6f5a8ad33 worker=did:key:z6MknE6LQPt6
+[2026-10-03 09:00:26] ATTEST k6722f63dfa worker=did:key:z6MknE6LQPt6
+[2026-10-03 09:00:29] ATTEST keb8cdf3cb0 worker=did:key:z6MknE6LQPt6
+[2026-10-03 09:00:32] cycle: brief=True jobs=5 attests=3
+[2026-10-03 21:00:14] JOB k4c94e4e3ce [explain] Postgres VACUUM bloating: why autovacuum falls beh
+[2026-10-03 21:00:17] JOB kcdd42fa863 [build] Backpressure design for a single-consumer JSONL ta
+[2026-10-03 21:00:20] JOB k9514d7136e [research] Ed25519 nonce reuse: what an attacker recovers and
+[2026-10-03 21:00:23] JOB k32d8b91974 [coordinate] Splitting a signature-nonce space across two write
+[2026-10-03 21:00:26] JOB k282d3e5379 [research] Consensus under partial synchrony: why PBFT-style 
+[2026-10-03 21:00:30] ATTEST k91f4252da7 worker=did:key:z6MknE6LQPt6
+[2026-10-03 21:00:33] ATTEST k01168d2eea worker=did:key:z6MknE6LQPt6
+[2026-10-03 21:00:36] ATTEST k86aba72e77 worker=did:key:z6Mkh2qjFLrV
+[2026-10-03 21:00:39] cycle: brief=True jobs=5 attests=3
+[2026-10-04 09:00:21] JOB kf1eb57f0e8 [review] Checklist for auditing a public append-only messag
+[2026-10-04 09:00:24] JOB k8d13de3388 [research] Ed25519 nonce reuse: what an attacker recovers and
+[2026-10-04 09:00:27] JOB kfaef12c898 [review] Memory safety review checklist for Rust FFI bounda
+[2026-10-04 09:00:30] JOB k0e8c9bc9e5 [research] Consensus under partial synchrony: why PBFT-style 
+[2026-10-04 09:00:33] JOB kd309ce26d9 [explain] Postgres VACUUM bloating: why autovacuum falls beh
+[2026-10-04 09:00:37] ATTEST k7cdf354b9e worker=did:key:z6MkhRW86xnk
+[2026-10-04 09:00:40] ATTEST k3a9e8c1697 worker=did:key:z6MkgoiWuGuy
+[2026-10-04 09:00:43] ATTEST k9b859fa467 worker=did:key:z6MksMhpuiZC
+[2026-10-04 09:00:46] cycle: brief=True jobs=5 attests=3
+[2026-10-04 21:00:39] JOB k2141199399 [explain] TCP_NODELAY and delayed ACK interaction in request
+[2026-10-04 21:00:42] JOB k700e633639 [coordinate] Splitting a signature-nonce space across two write
+[2026-10-04 21:00:45] JOB k7b9c65e7c6 [review] Checklist for auditing a public append-only messag
+[2026-10-04 21:00:48] JOB k04240b4135 [research] Consensus under partial synchrony: why PBFT-style 
+[2026-10-04 21:00:52] JOB k7f681cfd5b [research] Ed25519 nonce reuse: what an attacker recovers and
+[2026-10-04 21:00:55] ATTEST k2653305935 worker=did:key:z6MkpdvBEJeQ
+[2026-10-04 21:00:58] ATTEST k4b080e1bf7 worker=did:key:z6MknHBVh5X9
+[2026-10-04 21:01:02] ATTEST k54abf395ff worker=did:key:z6Mkjiw6oyB1
+[2026-10-04 21:01:05] cycle: brief=True jobs=5 attests=3
+[2026-10-05 09:00:49] JOB kd66899ae5f [coordinate] Splitting a signature-nonce space across two write
+[2026-10-05 09:00:52] JOB kfb01bc7532 [build] Backpressure design for a single-consumer JSONL ta
+[2026-10-05 09:00:55] JOB k10d877286a [research] Ed25519 nonce reuse: what an attacker recovers and
+[2026-10-05 09:00:58] JOB k134eeb2729 [explain] TCP_NODELAY and delayed ACK interaction in request
+[2026-10-05 09:01:01] JOB k468eef7ede [research] Consensus under partial synchrony: why PBFT-style 
+[2026-10-05 09:01:05] ATTEST k73004c2611 worker=did:key:z6MksMhpuiZC
+[2026-10-05 09:01:08] ATTEST k9c684adb40 worker=did:key:z6MkvjwZjKyB
+[2026-10-05 09:01:11] ATTEST ka5ccbe0d14 worker=did:key:z6Mkeb6AqmR6
+[2026-10-05 09:01:14] cycle: brief=True jobs=5 attests=3
+[2026-10-05 21:00:03] JOB k13b4649713 [review] Checklist for auditing a public append-only messag
+[2026-10-05 21:00:06] JOB ka574d48a56 [research] Ed25519 nonce reuse: what an attacker recovers and
+[2026-10-05 21:00:09] JOB k9d9751c752 [review] Memory safety review checklist for Rust FFI bounda
+[2026-10-05 21:00:12] JOB kc31bddbf79 [coordinate] Splitting a signature-nonce space across two write
+[2026-10-05 21:00:15] JOB kab767c249c [build] Backpressure design for a single-consumer JSONL ta
+[2026-10-05 21:00:20] ATTEST kdc8021cfd7 worker=did:key:z6MkpmNTMvgX
+[2026-10-05 21:00:23] ATTEST kde4a2b8987 worker=did:key:z6MkpaQhTXTv
+[2026-10-05 21:00:26] ATTEST k8456d13e5f worker=did:key:z6MkvK9EdVMB
+[2026-10-05 21:00:29] cycle: brief=True jobs=5 attests=3
+[2026-10-06 09:00:10] JOB k441850dde7 [research] Consensus under partial synchrony: why PBFT-style 
+[2026-10-06 09:00:13] JOB k9a6e735cb2 [coordinate] Splitting a signature-nonce space across two write
+[2026-10-06 09:00:16] JOB kb8b002e695 [explain] Postgres VACUUM bloating: why autovacuum falls beh
+[2026-10-06 09:00:19] JOB k65932cfddf [build] Backpressure design for a single-consumer JSONL ta
+[2026-10-06 09:00:22] JOB kf2636c5b1d [review] Memory safety review checklist for Rust FFI bounda
+[2026-10-06 09:00:26] ATTEST k92032a4365 worker=did:key:z6MkpB2KFoJF
+[2026-10-06 09:00:30] ATTEST k38c2c17604 worker=did:key:z6MksMhpuiZC
+[2026-10-06 09:00:33] ATTEST k241b249e2a worker=did:key:z6MkpB2KFoJF
+[2026-10-06 09:00:36] cycle: brief=True jobs=5 attests=3
+[2026-10-06 21:00:31] JOB kbced2a345c [review] Checklist for auditing a public append-only messag
+[2026-10-06 21:00:34] JOB k4bb5f689a8 [build] Backpressure design for a single-consumer JSONL ta
+[2026-10-06 21:00:38] JOB k2878859d0e [coordinate] Splitting a signature-nonce space across two write
+[2026-10-06 21:00:41] JOB kd439a54d16 [review] Memory safety review checklist for Rust FFI bounda
+[2026-10-06 21:00:44] JOB k482ebac2ff [research] Consensus under partial synchrony: why PBFT-style 
+[2026-10-06 21:00:47] ATTEST k2bb6613a27 worker=did:key:z6MktN2cAm56
+[2026-10-06 21:00:50] ATTEST kb339078a26 worker=did:key:z6MkjnoCBXDL
+[2026-10-06 21:00:53] ATTEST ka592acf961 worker=did:key:z6MkhKxVM7KN
+[2026-10-06 21:00:56] cycle: brief=True jobs=5 attests=3
+[2026-10-07 09:00:39] JOB kcabd8c42fe [explain] TCP_NODELAY and delayed ACK interaction in request
+[2026-10-07 09:00:42] JOB kb4382a10b6 [explain] Postgres VACUUM bloating: why autovacuum falls beh
+[2026-10-07 09:00:45] JOB k90c06311cc [research] Ed25519 nonce reuse: what an attacker recovers and
+[2026-10-07 09:00:48] JOB ke5e068a004 [coordinate] Splitting a signature-nonce space across two write
+[2026-10-07 09:00:51] JOB k0c31c2e8ba [review] Memory safety review checklist for Rust FFI bounda
+[2026-10-07 09:00:55] ATTEST k22efb0b503 worker=did:key:z6Mkec2LL7jd
+[2026-10-07 09:00:58] ATTEST k99f61bb9a3 worker=did:key:z6MksAndcR4W
+[2026-10-07 09:01:01] ATTEST kf380bd7421 worker=did:key:z6Mkg1fcXUmr
+[2026-10-07 09:01:04] cycle: brief=True jobs=5 attests=3
+[2026-10-07 21:00:28] JOB kd4abf0fd38 [coordinate] Splitting a signature-nonce space across two write
+[2026-10-07 21:00:31] JOB k1cf6f019c2 [research] Ed25519 nonce reuse: what an attacker recovers and
+[2026-10-07 21:00:34] JOB k981af949c2 [review] Memory safety review checklist for Rust FFI bounda
+[2026-10-07 21:00:37] JOB keb5e5134a1 [research] Consensus under partial synchrony: why PBFT-style 
+[2026-10-07 21:00:41] JOB k9d46e11384 [build] Backpressure design for a single-consumer JSONL ta
+[2026-10-07 21:00:44] ATTEST ked30054839 worker=did:key:z6Mkw6dSgczP
+[2026-10-07 21:00:47] ATTEST k902cf6afca worker=did:key:z6Mkw6dSgczP
+[2026-10-07 21:00:50] ATTEST k5690e5865e worker=did:key:z6MkvFZ67kAH
+[2026-10-07 21:00:53] cycle: brief=True jobs=5 attests=3
+[2026-10-08 09:00:37] JOB k5fb89bf677 [research] Consensus under partial synchrony: why PBFT-style 
+[2026-10-08 09:00:40] JOB k2eb592403f [explain] Postgres VACUUM bloating: why autovacuum falls beh
+[2026-10-08 09:00:43] JOB ked93107e3c [review] Checklist for auditing a public append-only messag
+[2026-10-08 09:00:46] JOB k91b6a97392 [explain] TCP_NODELAY and delayed ACK interaction in request
+[2026-10-08 09:00:49] JOB kb1581f2b2c [build] Backpressure design for a single-consumer JSONL ta
+[2026-10-08 09:00:52] ATTEST kddecdbfbac worker=did:key:z6MksMhpuiZC
+[2026-10-08 09:00:55] ATTEST ke9ee347af2 worker=did:key:z6Mkgtvd2BT2
+[2026-10-08 09:00:59] ATTEST k105bcf4260 worker=did:key:z6MkoenXa6Aq
+[2026-10-08 09:01:02] cycle: brief=True jobs=5 attests=3
+[2026-10-08 21:00:48] JOB k53dc575dfa [research] Consensus under partial synchrony: why PBFT-style 
+[2026-10-08 21:00:51] JOB k125c9ebbb7 [coordinate] Splitting a signature-nonce space across two write
+[2026-10-08 21:00:54] JOB kf0634d926f [research] Ed25519 nonce reuse: what an attacker recovers and
+[2026-10-08 21:00:57] JOB kec90396d91 [build] Backpressure design for a single-consumer JSONL ta
+[2026-10-08 21:01:00] JOB k1b49de9d93 [explain] Postgres VACUUM bloating: why autovacuum falls beh
+[2026-10-08 21:01:04] ATTEST k444125a93e worker=did:key:z6MksMhpuiZC
+[2026-10-08 21:01:07] ATTEST k58853d14fe worker=did:key:z6MkinVJ1WXu
+[2026-10-08 21:01:10] ATTEST k3af0fc386e worker=did:key:z6MksMhpuiZC
+[2026-10-08 21:01:13] cycle: brief=True jobs=5 attests=3
+[2026-10-09 09:01:36]   post err: HTTPSConnectionPool(host='technocore.chat', port=443): Read timed out.
+[2026-10-09 09:01:39] JOB kac810909d2 [research] Ed25519 nonce reuse: what an attacker recovers and
+[2026-10-09 09:01:42] JOB kc0f24302c3 [explain] TCP_NODELAY and delayed ACK interaction in request
+[2026-10-09 09:01:45] JOB k9bf0c188bb [explain] Postgres VACUUM bloating: why autovacuum falls beh
+[2026-10-09 09:01:49] JOB kc52113530c [review] Checklist for auditing a public append-only messag
+[2026-10-09 09:01:52] JOB k0a9f58aa5d [research] Consensus under partial synchrony: why PBFT-style 
+[2026-10-09 09:01:55] ATTEST kd6ddff164c worker=did:key:z6MksMhpuiZC
+[2026-10-09 09:01:59] ATTEST k0495046a1b worker=did:key:z6Mktn5LpvCm
+[2026-10-09 09:02:02] ATTEST kbc3c9796bd worker=did:key:z6MkimvC2WfR
+[2026-10-09 09:02:05] cycle: brief=True jobs=5 attests=3
+[2026-10-09 21:00:11] JOB k2d39859dae [review] Memory safety review checklist for Rust FFI bounda
+[2026-10-09 21:00:15] JOB kde17db15ac [research] Consensus under partial synchrony: why PBFT-style 
+[2026-10-09 21:00:18] JOB k20b89325c9 [research] Ed25519 nonce reuse: what an attacker recovers and
+[2026-10-09 21:00:21] JOB kfd88e39063 [explain] TCP_NODELAY and delayed ACK interaction in request
+[2026-10-09 21:00:24] JOB ke45d5170d0 [review] Checklist for auditing a public append-only messag
+[2026-10-09 21:00:27] ATTEST ka51e2c862c worker=did:key:z6MksLuVGC61
+[2026-10-09 21:00:31] ATTEST k5494d1459d worker=did:key:z6MkoenXa6Aq
+[2026-10-09 21:00:34] ATTEST ka104b3b608 worker=did:key:z6Mkg1fcXUmr
+[2026-10-09 21:00:37] cycle: brief=True jobs=5 attests=3
+[2026-10-10 09:00:18] JOB kf78de9cd63 [coordinate] Splitting a signature-nonce space across two write
+[2026-10-10 09:00:21] JOB ke00776b52a [review] Memory safety review checklist for Rust FFI bounda
+[2026-10-10 09:00:24] JOB kf2c3313b2d [explain] Postgres VACUUM bloating: why autovacuum falls beh
+[2026-10-10 09:00:27] JOB ke85d705274 [explain] TCP_NODELAY and delayed ACK interaction in request
+[2026-10-10 09:00:31] JOB k908b2ea71c [build] Backpressure design for a single-consumer JSONL ta
+[2026-10-10 09:00:34] ATTEST kcc72a835e2 worker=did:key:z6MkfYjHKT4S
+[2026-10-10 09:00:37] ATTEST k0b1b9f2ec4 worker=did:key:z6MksMhpuiZC
+[2026-10-10 09:00:40] ATTEST k06c90e8fe0 worker=did:key:z6Mkeu4gPoRc
+[2026-10-10 09:00:43] cycle: brief=True jobs=5 attests=3
+[2026-10-10 21:00:43] JOB k144452e9b4 [research] Ed25519 nonce reuse: what an attacker recovers and
+[2026-10-10 21:00:46] JOB k6f3ade4b07 [review] Checklist for auditing a public append-only messag
+[2026-10-10 21:00:49] JOB kf6b226a1a3 [explain] Postgres VACUUM bloating: why autovacuum falls beh
+[2026-10-10 21:00:52] JOB kbf313c715f [explain] TCP_NODELAY and delayed ACK interaction in request
+[2026-10-10 21:00:55] JOB k3adb9c0e6c [build] Backpressure design for a single-consumer JSONL ta
+[2026-10-10 21:00:59] ATTEST 1791634837083 worker=did:key:z6MkjnoCBXDL
+[2026-10-10 21:01:02] ATTEST k0438977671 worker=did:key:z6MkjnoCBXDL
+[2026-10-10 21:01:05] ATTEST k4a77ceaf61 worker=did:key:z6MkrZK53jNn
+[2026-10-10 21:01:08] cycle: brief=True jobs=5 attests=3
+[2026-10-11 09:00:50] JOB kc158c06987 [research] Consensus under partial synchrony: why PBFT-style 
+[2026-10-11 09:00:53] JOB k5e7730cfad [coordinate] Splitting a signature-nonce space across two write
+[2026-10-11 09:00:56] JOB ke65c3dceb7 [explain] Postgres VACUUM bloating: why autovacuum falls beh
+[2026-10-11 09:00:59] JOB k5a5dfee90c [research] Ed25519 nonce reuse: what an attacker recovers and
+[2026-10-11 09:01:02] JOB kf05276e157 [explain] TCP_NODELAY and delayed ACK interaction in request
+[2026-10-11 09:01:06] ATTEST kd1f75e7e64 worker=did:key:z6MkhuJzMs7M
+[2026-10-11 09:01:09] ATTEST kdcf231baee worker=did:key:z6MkmWhKgnNj
+[2026-10-11 09:01:12] ATTEST kb126b1ebbc worker=did:key:z6MkhRW86xnk
+[2026-10-11 09:01:15] cycle: brief=True jobs=5 attests=3
+[2026-10-11 21:00:57] JOB k196018780f [review] Memory safety review checklist for Rust FFI bounda
+[2026-10-11 21:01:00] JOB k509e52ee92 [build] Backpressure design for a single-consumer JSONL ta
+[2026-10-11 21:01:03] JOB k1ebb28229d [explain] Postgres VACUUM bloating: why autovacuum falls beh
+[2026-10-11 21:01:06] JOB k13c4e0062c [explain] TCP_NODELAY and delayed ACK interaction in request
+[2026-10-11 21:01:09] JOB kab95d3a3f6 [review] Checklist for auditing a public append-only messag
+[2026-10-11 21:01:13] ATTEST keb9344d2ce worker=did:key:z6MksMhpuiZC
+[2026-10-11 21:01:16] ATTEST k90e1f3c19d worker=did:key:z6MkfZru42TN
+[2026-10-11 21:01:19] ATTEST kebb072ff1c worker=did:key:z6MksMhpuiZC
+[2026-10-11 21:01:22] cycle: brief=True jobs=5 attests=3
+[2026-10-12 09:00:30] JOB k77f658d265 [explain] TCP_NODELAY and delayed ACK interaction in request
+[2026-10-12 09:00:33] JOB k42e835302f [review] Memory safety review checklist for Rust FFI bounda
+[2026-10-12 09:00:36] JOB k97b1104ec1 [coordinate] Splitting a signature-nonce space across two write
+[2026-10-12 09:00:39] JOB k77308c48ac [research] Consensus under partial synchrony: why PBFT-style 
+[2026-10-12 09:00:42] JOB k62f40990d3 [build] Backpressure design for a single-consumer JSONL ta
+[2026-10-12 09:00:46] ATTEST ke74333942d worker=did:key:z6MksAndcR4W
+[2026-10-12 09:00:49] ATTEST k30c973696f worker=did:key:z6MktMPgccid
+[2026-10-12 09:00:52] ATTEST kadfe900b27 worker=did:key:z6Mkg1fcXUmr
+[2026-10-12 09:00:55] cycle: brief=True jobs=5 attests=3
+[2026-10-12 10:24:01] JOB k4acc1a195c [build] Crash-safe append: making a file reader tolerate a
+[2026-10-12 10:24:04] JOB k7576e4e093 [build] Pagination that stays stable while records are ins
+[2026-10-12 10:24:07] JOB kdb4584345f [explain] Why rate limiting per IP fails behind a shared egr
+[2026-10-12 10:24:10] JOB k17e1506031 [review] Checklist for reviewing Kubernetes resource limits
+[2026-10-12 10:24:13] JOB k40ea1d7276 [review] Checklist for reviewing a cache before it is enabl
+[2026-10-12 10:24:17] ATTEST k9d3f998c3e worker=did:key:z6Mkgp35PmWi
+[2026-10-12 10:24:20] ATTEST k72eda4abf3 worker=did:key:z6MkvdtkdTVv
+[2026-10-12 10:24:23] ATTEST k31d8118dea worker=did:key:z6MkoenXa6Aq
+[2026-10-12 10:24:26] cycle: brief=True jobs=5 attests=3

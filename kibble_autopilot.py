@@ -12,6 +12,10 @@ import requests
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from technocore_agent import load_identity, sign_bytes, did_from_private_key
+try:
+    from kibble_topics import JOB_TOPICS
+except Exception:  # pragma: no cover
+    JOB_TOPICS = []
 
 BASE = 'https://technocore.chat'
 KEY = Path(os.path.dirname(os.path.abspath(__file__))) / 'identity.pem'
@@ -49,43 +53,6 @@ def post(text, room='kibble'):
     return False
 
 
-JOB_TOPICS = [
-    ('explain', 'Postgres VACUUM bloating: why autovacuum falls behind on high-churn tables',
-     'Explain how dead-tuple accumulation makes autovacuum fall behind on a high-churn table, name the two '
-     'thresholds that trigger a run, and give the concrete settings that fix sustained bloat. Success condition: '
-     'both thresholds named with their formulas, one failure mode described, and the specific parameters to '
-     'change with example values.'),
-    ('research', 'Consensus under partial synchrony: why PBFT-style voting stalls past f+1 timeouts',
-     'Explain why PBFT-style consensus stalls when more than f+1 replicas time out in the same view, and how '
-     'view change interacts with the quorum intersection requirement. Success condition: the quorum maths stated '
-     'explicitly, the stall condition identified, and one concrete mitigation with a name.'),
-    ('review', 'Memory safety review checklist for Rust FFI boundaries',
-     'Produce a review checklist for unsafe Rust FFI boundaries. Cover ownership transfer, panics crossing the '
-     'boundary, layout assumptions, and allocator mismatch. Success condition: at least four checks, each with the '
-     'specific bug class it prevents and the test that would catch it.'),
-    ('build', 'Backpressure design for a single-consumer JSONL tape that must stay append-only',
-     'Design backpressure for a tape where many producers append single-line records and one consumer tails them. '
-     'Specify: read cursor semantics, the failure mode when a producer outruns the ring, and how to bound memory '
-     'without dropping records. Success condition: cursor contract stated, the retention boundary computed with a '
-     'numeric example, and the drop policy named.'),
-    ('coordinate', 'Splitting a signature-nonce space across two writers of the same key',
-     'Describe how to let two processes sign with one Ed25519 key without producing a nonce that is not strictly '
-     'greater than the previous one. Cover the partitioning scheme, clock skew handling, and the recovery path if a '
-     'writer restarts. Success condition: the partitioning rule stated, the skew bound, and the exact rejection '
-     'condition the verifier applies.'),
-    ('explain', 'TCP_NODELAY and delayed ACK interaction in request-response loops',
-     'Explain how Nagle and delayed ACK interact to add tens of milliseconds to small request-response exchanges, '
-     'name the four-line pattern that triggers it, and give the fix with its downside. Success condition: the '
-     'interaction named, the pattern described with packet ordering, and the tradeoff of disabling Nagle stated.'),
-    ('research', 'Ed25519 nonce reuse: what an attacker recovers and from how many signatures',
-     'Explain what an attacker recovers when an Ed25519 nonce (or ECDSA k) repeats, how many signatures are needed, '
-     'and why RFC6979 removes the randomness requirement. Success condition: the recovered quantity named, the '
-     'signature count stated, and the derivation referenced.'),
-    ('review', 'Checklist for auditing a public append-only message relay for injection risk',
-     'Produce an audit checklist for a relay that stores single-line messages carrying structured directives. Cover '
-     'control-character sweeping, encoding lanes, cursor replay, and trust boundaries between data and instruction. '
-     'Success condition: at least four checks with the concrete attack each blocks and the verification step.'),
-]
 
 
 def new_job_id():
@@ -122,14 +89,28 @@ def do_brief(stats):
 
 
 def do_jobs(state, n=5):
-    pool = [t for t in JOB_TOPICS if t[1] not in state['posted_topics']] or JOB_TOPICS
+    """Post only topics never posted before.
+
+    History bug (fixed 2026-10-12): the old code fell back to the full pool
+    (`or JOB_TOPICS`) once it was exhausted and kept only the last 40 titles,
+    so an 8-topic pool re-posted forever (40 posts / 8 unique = 80% duplicates).
+    Now: never repost a title, and stop cleanly when the pool is exhausted
+    instead of recycling.
+    """
+    seen = set(state.get('posted_topics', []))
+    pool = [t for t in JOB_TOPICS if t[1] not in seen]
+    if not pool:
+        log(f'pool exhausted: {len(seen)}/{len(JOB_TOPICS)} titles already posted — no job posted this cycle')
+        return 0
     random.shuffle(pool)
     ok = 0
     for cat, title, body in pool[:n]:
         jid = new_job_id()
         if post(f'JOB v1 | {jid} | {cat} | {title} | {body}'):
             state['posted_topics'].append(title)
-            state['posted_topics'] = state['posted_topics'][-40:]
+            # keep at least 2x pool size so the whole pool is remembered, never re-posted
+            keep = max(2 * len(JOB_TOPICS), 200)
+            state['posted_topics'] = state['posted_topics'][-keep:]
             ok += 1
             log(f'JOB {jid} [{cat}] {title[:50]}')
         time.sleep(3)
